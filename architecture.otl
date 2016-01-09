@@ -1,0 +1,43 @@
+Presenter
+	Throws the menu up on the screen.
+Acquirer
+	Acquires the keystroke. Same as UMENU1.
+Datareader
+	Grabs all data for a given letterstring
+Runner
+	Run the command thru shellscript
+		Same as UMENU1
+Thisdata
+	A data football containing the menu's title,
+		all child letters, prompts and menustatuses,
+		and afters
+
+Globals
+	This will be similar to UMENU1.
+
+
+
+MENU STRUCTURE ON DISK
+	: A tree of files and directories where filenames are keys and file
+	: contents are values.
+
+Directory is the letterstring, lowercase
+	Its child letters are directly under it
+	Its other properties are in props dir
+
+Contents of props
+	: Note: Any of these letters can be spelled out as long as it begins with
+	: the right letter. Or more accurately, you can use any letters as long as
+	: they form the start of one of the words.
+	i for icon
+	t for title
+	c for command: This is a dir with keys a-z, read in order
+		Or a file with one string
+		Or a file with command separators,
+			but this is non-portable
+	d for directory
+	e for environment variables: This is a dir with keys a-z, read in order
+	b for put in background. File contents don't matter
+	s for stop before displaying next menu. File contents don't matter.
+
+		
